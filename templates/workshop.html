@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reveal.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme/white.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/zenburn.css') }}">
+{% endblock %}
+
+{% block content %}
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown="{{ url_for('static', filename='doc/presentation.md') }}" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{{ url_for('static', filename='lib/js/head.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/reveal.js') }}"></script>
+
+  <script>
+    Reveal.initialize({
+
+      // Display controls in the bottom right corner
+      control: true,
+
+      // Display a presentation progress bar
+      progress: true,
+
+      // Push each slide change to the browser history
+      history: false,
+
+      // Vertical centering of slides
+      center: true,
+
+      dependencies: [
+
+        // Interpret Markdown in <section> elements
+        { src: "{{ url_for('static', filename='plugin/markdown/marked.js') }}", condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: "{{ url_for('static', filename='plugin/markdown/markdown.js') }}", condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+        // Syntax highlight for <code> elements
+        { src: "{{ url_for('static', filename='plugin/highlight/highlight.js') }}", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+        // Speaker notes
+        { src: "{{ url_for('static', filename='plugin/notes/notes.js') }}", async: true }
+      ]
+    });
+  </script>
+{% endblock %}

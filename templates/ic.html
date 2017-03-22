@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} - Iniciação Científica{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/IC.css' }}">
+{% endblock %}
+
+{% block content %} 
+	<div id="header">
+		<div class="container">
+      <p><a href="{{ url_for('home') }}">Tafarel Yan</a>, ainda tentando se formar engenheiro de minas</p>
+		</div>
+	</div>
+	<div id="content">
+		<div class="container">		 
+			<h1>Desenvolvimento de simulações computacionais para o estudo de operações de lavra de minas - desmonte de rocha por explosivos</h1>
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+          <img class="image-responsive" src="{{ url_for('static', filename='img/bancada.jpg') }}" />
+          <img class="image-responsive" src="{{ url_for('static', filename='img/vistatopo.jpg') }}" />
+          <img class="image-responsive" src="{{ url_for('static', filename='img/vistalateral.jpg') }}" />
+				</div>
+				<div class="col-md-6">
+					<h3>Iniciação Científica</h3>
+					<p>Para todo desmonte de rocha feitos por explosivos, existe o projeto do Plano de Fogo que distribui os furos carregados de explosivos de uma maneira geométrica conveniente. No mercado atual, há vários softwares disponíveis para realizar o design desses modelos de Plano de Fogo. O problema é a dificuldade para a utilização desses softwares no contexto acadêmico, pois a maior parte deles possui licença paga. O projeto da iniciação científica tem o intuito de tornar a realização desses projetos mais acessíveis para alunos de graduação/pós-graduação, mais especificamente da Engenharia de Minas.</p>
+					<h3>Linguagem</h3>
+					<p>Para adequar o programa ao uso acadêmico, nós usamos a plataforma de programação Mathematica®, desenvolvido pela empresa Wolfram Research. O principal critério de escolha da linguagem foi a sua facilidade de uso e de acesso, uma vez que a Universidade de São Paulo possui licenças ilimitadas disponíveis para os alunos e docentes.</p>
+					<h3>Resultados</h3>
+					<p>3 vistas diferentes da bancada são exportadas como imagem. Desse modo, fica fácil observar os principais elementos que compõe o Plano de Fogo. Para maiores detalhes, o programa também exporta um relatório sobre todos os dados relevantes de acordo com os dados de entrada inseridos.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-9">
+					<p>tafarel.yan@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

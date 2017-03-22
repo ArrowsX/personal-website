@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} - Telegram Bots {% endblock %}
+{% block css %}
+  <link rel = "stylesheet" href="{{ url_for('static', filename='css/tgb.css') }}">
+{% endblock %}
+
+{% block content %}
+	<div id="header">
+		<div class="container">
+      <p><a href="{{ url_for('home') }}">Tafarel Yan</a>, criando um Jarvis para Telegram</p>
+		</div>
+	</div>
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-3">
+          <img name="music" class="image-responsive" src="{{ url_for('static', filename='img/music.jpg') }}" /> 
+				</div>
+				<div class="col-xs-6 col-md-3 description">
+					<h1>TafsMusica</h1>
+					<h4>@TafsMusicBot</h4>
+					<p>Downloader de músicas para Telegram, só precisa digitar o nome da música desejada.</p>
+				</div>
+				<div class="col-xs-6 col-md-3">
+          <img name="bandeco" class="image-responsive" src="{{ url_for('static', filename='img/bandeco.jpg') }}" />
+				</div>
+				<div class="col-xs-6 col-md-3 description">
+					<h1>Bandejão</h1>
+					<h4>@BandecoUSPBot</h4>
+					<p>Mostra o cardápio dos restaurantes da semana.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6 col-md-3">
+          <img name="semm" class="image-responsive" src="{{ url_for('static', filename='img/semm.jpg') }}" />
+				</div>
+				<div class="col-xs-6 col-md-3 description">
+					<h1>SEMM</h1>
+					<h4>@SEMMBot</h4>
+					<p>Programação da SEMM.</p>
+				</div>
+				<div class="col-xs-6 col-md-3">
+          <img name="writer" class="image-responsive" src="{{ url_for('static', filename='img/writer.jpg') }}" />
+				</div>
+				<div class="col-xs-6 col-md-3 description">
+					<h1>Auxilio Escrita</h1>
+					<h4>@EscritaBot</h4>
+					<p>Sinônimos e antônimos de qualquer palavra portuguesa existente.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-9">
+					<p>tafarel.yan@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
