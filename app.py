@@ -5,17 +5,17 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/')
+@app.route('/ic')
 def ic():
     return render_template('ic.html')
 
-@app.route('/')
+@app.route('/telegram')
 def tgbots():
     return render_template('tgbots.html')
 
-@app.route('/')
-def workshop():
-    return render_template('workshop.html')
+@app.route('/petwalk')
+def petwalk():
+    return render_template('petwalk.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000')
+    app.run(debug=True)

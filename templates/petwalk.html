@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} - Iniciação Científica{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/petwalk.css') }}">
+{% endblock %}
+
+{% block content %} 
+	<div id="content">
+		<div class="container">		 
+      <h1><a href="https://telegram.me/PetWalkBot">PetWalk</a></h1>
+      <a href="https://telegram.me/PetWalkBot"><img class="image-responsive" src="{{ url_for('static', filename='img/petwalk.png') }}" /></a>
+		</div>
+	</div>
+{% endblock %}

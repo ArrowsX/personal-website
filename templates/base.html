@@ -6,18 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Tafarel Yan{% block title %}{% endblock %}</title>
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
-	<!-- Production only
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	--!>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 	{% block css %}{% endblock %}
 </head>
 <body>
 	{% block content %}{% endblock %}
-	<!-- Production only
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	-->
-  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 	{% block javascript %}{% endblock %}
 </body>
 </html>
